@@ -50,7 +50,7 @@
       padding-right: 20px;
     }
 
-    button
+    .login_button
     {
       background-color: #AD8759;
       width: 100px;
@@ -72,7 +72,7 @@
     </div>
 
     <div name = "options">
-      <button onclick="window.location.href='login.html'">Log in</button>
+      <button class = "login_button" onclick="window.location.href='login.html'">Log in</button>
     </div>
     
   </header>
