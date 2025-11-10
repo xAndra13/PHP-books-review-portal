@@ -72,7 +72,7 @@
     </div>
 
     <div name = "options">
-      <button class = "login_button" onclick="window.location.href='login.html'">Log in</button>
+      <button class = "login_button" onclick="window.location.href='viewer/login.php'">Log in</button>
     </div>
     
   </header>
