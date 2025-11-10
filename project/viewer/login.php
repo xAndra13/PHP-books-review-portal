@@ -7,6 +7,7 @@
   <title>BookVerse | Login</title>
 
   <style>
+    /** BEGIN TEMPLATE SECTION - EDIT CAREFULLY */
     body, html
     {
       /* This makes the header and the footer stick to top and bottom correctly */
@@ -20,7 +21,61 @@
     main
     {
       flex: 1; /*Makes main to take up all the space left between footer and header */
-      background-color: #fff6deff;
+    }
+    /** END TEMPLATE SECTION */
+    
+    main
+    {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+
+      background-image: url("../images/books.jpeg");
+      background-size: cover;       /* cover the entire main area */
+      background-position: center;  /* center the image */
+      background-repeat: no-repeat; /* don’t tile */
+    }
+
+    .container
+    {
+      background: linear-gradient(to bottom right, rgba(255,255,255,0.95), rgba(255, 246, 222, 0.95));
+      height: 100%;
+      width: 30%;
+      border-radius: 20px;
+      color: #473821;
+      text-align: center;
+      padding-top: 40px;
+      font-family: 'Emilys Candy', cursive;
+    }
+
+    .login_form{
+      margin: 100px;
+    }
+
+    input[type="text"]
+    {
+      width: 75%;
+      padding: 14px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 1rem;
+    }
+
+    input[type="submit"]
+    {
+      width: 200px;
+      height: 40px;
+      border: 0;
+      border-radius: 20px;
+      font-size: 17px;
+      background-color: #AD8759;
+    }
+
+    h4
+    {
+      margin-bottom: 20px;
     }
 
   </style>
@@ -30,6 +85,22 @@
   <?php include('header.php'); ?>
 
   <main>
+    <div class = "container">
+      <h1>Welcome to BookVerse!</h1>
+      <p style = "margin-bottom:30px;">A world of stories at your fingertips.</p>
+
+      <form action="../controller/loginController.php" method = "POST" class = "login_form">
+        <h4>Join us to connect with stories that inspire!</h4>
+        <input type="text" id="email" name="email">
+        <br>
+        <input type="text" id="password" name="password">
+        <br><br>
+        <input type="submit" value="Login">
+      </form>
+
+      <h4>Start your journey in BookVerse</h4>
+      <button>Register now</button>
+    </div>
   </main>
 
   <?php include('footer.php'); ?>

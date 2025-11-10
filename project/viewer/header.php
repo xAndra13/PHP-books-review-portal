@@ -35,7 +35,7 @@
       font-size: 20px;
     }
 
-    h1
+    .logo h1
     {
       font-family: 'Emilys Candy', cursive;
     }
