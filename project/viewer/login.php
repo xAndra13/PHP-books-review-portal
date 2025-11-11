@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -94,6 +97,13 @@
       font-size: 15px;
     }
 
+    .warning 
+    {
+      color: red;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
   </style>
 </head>
 
@@ -112,6 +122,10 @@
         <input type="text" id="password" name="password" placeholder = "Password">
         <br><br>
         <input type="submit" value="Login">
+
+        <?php if (isset($_SESSION["error"])): ?>
+          <div class="warning"><?= htmlspecialchars($_SESSION["error"])?></div>
+        <?php unset($_SESSION["error"]); endif; ?>
       </form>
 
       <h4>No account? Start your journey in BookVerse!</h4>
