@@ -46,16 +46,22 @@
       color: #473821;
       text-align: center;
       padding-top: 40px;
-      font-family: 'Emilys Candy', cursive;
+      padding-bottom: 40px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     .login_form{
-      margin: 100px;
+      margin-bottom: 100px;
+      margin-top: 50px;
     }
 
     input[type="text"]
     {
-      width: 75%;
+      width: 100%;
       padding: 14px;
       margin: 10px 0;
       border: 1px solid #ccc;
@@ -78,6 +84,16 @@
       margin-bottom: 20px;
     }
 
+    .register_button
+    {
+      background-color: #AD8759;
+      width: 150px;
+      height: 40px;
+      border: 0;
+      border-radius: 20px;
+      font-size: 15px;
+    }
+
   </style>
 </head>
 
@@ -91,15 +107,16 @@
 
       <form action="../controller/loginController.php" method = "POST" class = "login_form">
         <h4>Join us to connect with stories that inspire!</h4>
-        <input type="text" id="email" name="email">
+        <input type="text" id="email" name="email" placeholder = "Email">
         <br>
-        <input type="text" id="password" name="password">
+        <input type="text" id="password" name="password" placeholder = "Password">
         <br><br>
         <input type="submit" value="Login">
       </form>
 
-      <h4>Start your journey in BookVerse</h4>
-      <button>Register now</button>
+      <h4>No account? Start your journey in BookVerse!</h4>
+      <button class = "register_button" onclick="window.location.href='viewer/register.php'">Register now</button>
+
     </div>
   </main>
 
