@@ -98,14 +98,14 @@
 </head>
 
 <body>
-  <?php include('header.php'); ?>
+  <?php include('/var/www/html/viewer/header.php'); ?>
 
   <main>
     <div class = "container">
       <h1>Welcome to BookVerse!</h1>
       <p style = "margin-bottom:30px;">A world of stories at your fingertips.</p>
 
-      <form action="../controller/loginController.php" method = "POST" class = "login_form">
+      <form action="/controller/loginController.php" method = "POST" class = "login_form">
         <h4>Join us to connect with stories that inspire!</h4>
         <input type="text" id="email" name="email" placeholder = "Email">
         <br>
@@ -115,12 +115,12 @@
       </form>
 
       <h4>No account? Start your journey in BookVerse!</h4>
-      <button class = "register_button" onclick="window.location.href='register.php'">Register now</button>
+      <button class = "register_button" onclick="window.location.href='/viewer/register.php'">Register now</button>
 
     </div>
   </main>
 
-  <?php include('footer.php'); ?>
+  <?php include('/var/www/html/viewer/footer.php'); ?>
 </body>
 
 </html>
