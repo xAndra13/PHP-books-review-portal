@@ -115,7 +115,7 @@
       </form>
 
       <h4>No account? Start your journey in BookVerse!</h4>
-      <button class = "register_button" onclick="window.location.href='viewer/register.php'">Register now</button>
+      <button class = "register_button" onclick="window.location.href='register.php'">Register now</button>
 
     </div>
   </main>
